@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Nevoski UX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- style overrides -->
+		 <link rel="stylesheet" href="assets/css/overrides.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title"   id="nav">Nevoski UX</a>
+				<nav>
+					<ul>
+						<li><a href="" style="border-bottom: 1px solid #ccff8b;font-size:12px;"><strong>Portal</strong></a></li>
+						<li><a href="graph.html">Graph</a></li>
+						<li><a href="various.html">Snapshots</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major" id="title">A Veteran healthcare portal</h1>
+							<span class="image fit"><img src="images/portal/portal_header.png" alt="" /></span>
+							<p>Contents:&nbsp;&nbsp;<a href="#problem" class="scrolly">Problem &#9662;</a><span style="margin-right:1em;"></span><a href="#process" class="scrolly">Process &#9662;</a><span style="margin-right:1em;"></span><a href="#solution" class="scrolly">Solution &#9662;</a></p>
+							<h2 id="overview">Overview</h2>
+							<h3>The Project</h3>
+							<p>When a Veteran applies for healthcare with the U.S. Department of Veterans Affairs (VA), qualified healthcare providers must assess their healthcare needs, and send this information to the VA using <a href="https://www.benefits.va.gov/compensation/dbq_publicdbqs.asp" target="_blank">Disability Benefits Questionnaire (DBQ) forms</a>. I was part of a team that developed an online portal that allows for publically available DBQ forms to be filled out and sent in electronically. Using the portal, form formatting is standardized, and there are additional features and quality checks not possible with other methods of filling out the forms.</p>
+							<h3>Role & skills</h3>
+							<p>As the sole designer on this team, I supported developers, project managers, and product owners. The main UX skills involved in this project were:</p>
+							<table class="alt">
+								<tbody>
+									<tr>
+										<td><span class="icon solid fa-info" style="margin-right:1em;"></span>SME interviews</td>
+										<td><span class="icon solid fa-desktop" style="margin-right:1em;"></span>Low-fidelity wireframes</td>
+										<td><span class="icon solid fa-desktop" style="margin-right:1em;"></span>User flows</td>
+										<td><span class="icon solid fa-desktop" style="margin-right:1em;"></span>Design system creation</td>
+									</tr>
+									<tr>
+										<td><span class="icon solid fa-desktop" style="margin-right:1em;"></span>High-fidelity mockups</td>
+										<td><span class="icon solid fa-cog" style="margin-right:1em;"></span></span>Interactive prototypes</td>
+										<td><span class="icon solid fa-code" style="margin-right:1em;"></span></span>Front-end QA</td>
+										<td><span class="icon solid fa-image" style="margin-right:1em;"></span>Graphic design & illustration</td>
+									</tr>
+								</tbody>
+							</table>
+							<h3>Impact</h3>
+							<p>Developer-ready mockups, interactive prototypes, product demos, marketing materials, and an MVP live site that received consistent positive feedback from SMEs and VA product owners. A total of ten DBQ forms were included in mockups and planned for development before the closure of the project.</p>
+							<hr>
+							<h2 id="problem">The problem</h2>
+							<h3>Background</h3>
+							<p>Veterans may use licensed VA healthcare providers, or they may opt for private third party healthcare providers, when completing their required examinations. While licensed VA healthcare providers tend to fill out DBQs more accurately and consistently, private healthcare providers are more widely available and may be more accessible to Veterans. Private providers do not go through the same training process as licensed VA providers, and their approach to filling out the DBQs varies from provider to provider.</p>
+							<h3>Pain points</h3>
+							<p>The lack of standardized methods of filling out the DBQs amongst private providers introduces the main problems associated with this process, and they ultimately contribute to wasted time, effort, and potentially preventing Veterans from receiving their VA health benefits. I spoke with VA product owners, VA healthcare providers, and other VA SMEs via video meetings to learn the common pain points associated with the existing DBQ system. They included: </p>
+							<ol>
+								<li>The lack of a standardized method for filling out certain DBQ form fields, leading to confusion and inaccurate reading of form contents, and potential rejection of the DBQ form.</li>
+								<li>Healthcare provider mistakes, such as failure to fill out required fields, and entering potentially conflicting diagnoses or data points in different form sections.</li>
+								<li>The lack of a standardized means of delivering the DBQ PDF form, which could be delivered as hand-written forms, electronic PDFs, or even raw .XML data from other non-standardized electronic sources.</li>
+							</ol>
+							<p>In addition to the main pain points, the discovery process yielded another: DBQ length. Sometimes healthcare examiners only need to fill out a small portion of the DBQ (i.e. a Veteran doesn't have many symptoms), and so scanning the entire DBQ for the appropriate place to enter the information was tedious.</p>
+							<p><strong><a href="#nav" class="scrolly">To Top &#9652;</a></strong></p>
+							<hr>
+							<h2 id="process">The process</h2>
+							<h3>Research & discovery</h3>
+							<p>Through speaking with VA SMEs and my development team, the team determined what forms to prioritize from the list of 60+ publically available DBQs. Each DBQ is a mix of common sections and unique questions, each potentially requiring bespoke design and development. My first step was to determine which common sections could be standardized across each form.</p>
+							<image class="image fit" src="images/portal/dbq_begin_end.png" alt=""></image>
+							<image class="image fit" src="images/portal/dbq_contents.png" alt=""></image>
+							<image class="image fit" src="images/portal/dbq_element_pattern.png" alt=""></image>
+							<p>The VA does have its own design system with existing standardized form components and patterns, but because I did not need to strictly adhere to this system for this project, I only took basic inspiration. Things like 508 compliant colors and some existing alert components where appropriate to reuse, along with the overall layout and design of the portal's landing page being kept consistent with existing VA pages.</p>
+							<h3>Key features</h3>
+							<p>From conversations with the team, we determined the key features of the site:</p>
+							<ul>
+								<li>A landing page & sign in process</li>
+								<li>A dashboard for selecting DBQs, and viewing in progress work</li>
+								<li>The electronic form itself, and form navigation</li>
+								<li>A process for validating the form data</li>
+								<li>The sign and send process</li>
+							</ul>
+							<p>With these key features in mind, I began my ideation process.</p>
+							<h3>Mockups & prototypes</h3>
+							<p>The key features of the portal formed the basic structure and flow of the site, so with these in mind, I created my some low fidelity mockups of key screens.</p>
+							<image class="image fit" src="images/portal/portal_lofi_1.png" alt=""></image>
+							<image class="image fit" src="images/portal/portal_lofi_2.png" alt=""></image>
+							<h3>User flow</h3>
+							<p>Next, using the low fidelity mockups, I created a high-level user flow. The team's developers used this as a general framework for building out the portal's main structure and featuers.</p>
+							<image class="image fit" src="images/portal/user_flow_small.png" alt="Low fidelity user flow image"></image>
+							<p><a href="images/portal/user_flow_large.png" target="_blank">View this full size &#9656;</a><br>or scroll through the <code>iframe</code> below.</p>
+							<iframe src="images/portal/user_flow_large.png" style="height:603px;width:100%;"></iframe>
+							<p></p>
+							<h3>Mid fidelity prototypes</h3>
+							<p>Next, I created some mid fidelity interactive prototypes demonstrating key interactions. At each step I communicated my ideas to the development team to give them time to scope their work, as well as give me any feedback. Components and prototypes at this stage were designed to capture core features and functionality, rather than represent anything final.</p>
+							<image class="image fit" src="images/portal/midfi_components.png" alt="Example of mid fidelity components"></image>
+							<image class="image fit" src="images/portal/midfi_screens.png" alt="Mid fidelity prototype mockups"></image>
+							<p>The mid fidelity portal prototype in action:</p>
+							<video autoplay muted loop controls>
+								<source src="video/midfi_portal_prototype.mp4">
+								Your browswer does not support the <code>video</code> tag.
+							</video>
+							<p></p>
+							<h3>Pain point #1:</h3>
+							<h3>Free text field confusion</h3>
+							<p>DBQs often have optional free text fields that include the phrase "list using the above format". This introduces an unnecessary burden on examining clinicians, who simply have to figure out for themselves how to format their additional responses. If they don't reproduce this format accurately, it introduces potential confusion for the VA raters, and delays in processing the Veteran's benefits.</p>
+							<image class="image fit" src="images/portal/free_text_confusion_1.png" alt=""></image>
+							<h3>Pain point #2:</h3>
+							<h3>Missing information</h3>
+							<p>The long form paper DBQs can be complex and require detailed information, and if any required question is missed, it introduces delays in processing benefits. By default, every question on an electronic DBQ is required, unless otherwise noted. The DBQ cannot be sent it to the VA via the portal unless each question has a response, eliminating the potential for missed questions.</p>
+							<image class="image fit" src="images/portal/missing_info_1.png" alt=""></image>
+							<h3>Pain point #3:</h3>
+							<h3>Standard formats</h3>
+							<p>In the vast majority of cases, the VA expects to receive DBQ forms as PDFs, either hand written or electronic. By default, the portal generates an electronic PDF by mapping a user's responses to their respective PDF form elements, and sends this electronic form to the VA. The user can then download the form as an electronic PDF, or .XML file, for local storage.</p>
+							<image class="image fit" src="images/portal/standard_formats.png" alt=""></image>
+							<h3>Pain point #4:</h3>
+							<h3>Cognitive load</h3>
+							<p>DBQs can be very visually cluttered, and physician's may not even need to fill out whole section of a given form, depending on the specific health issues a Veteran faces. On the paper form all questions are visible at once, but in the electronic form, we can hide conditionally visible form elements behind their corresponding parent option.</p>
+							<image class="image fit" src="images/portal/cognitive_load_1.png" alt=""></image>
+							<h3>Testing and iteration</h3>
+							<p>I conducted basic usability testing with my internal team members, external VA product owners, and other VA SMEs. In the early stages of the project, development kept pace with design, so I was able to use a combination of Figma prototypes and the live MVP site itself.</p>
+							<p>An example prototype I used for usability testing, which include tablet-responsive design, left navigation menu, and conditionally visible form elements.</p>
+							<video autoplay muted loop controls>
+								<source src="video/tablet_prototype.mp4">
+								Your browswer does not support the <code>video</code> tag.
+							</video>
+							<p></p>
+							<p>Additional and more involved testing with a wider range of potential users was planned, but due to the closure of the project, usability testing was limited to those invovled with the designa and development process for the first version of the MVP live site.</p>
+							<p><strong><a href="#nav" class="scrolly">To Top &#9652;</a></strong></p>
+							<hr>
+							<h2 id="solution">The solution</h2>
+							<ul>
+								<li><a href="#components_final" class="scrolly">Components &#9662;</a></li>
+								<li><a href="#dashboard_final" class="scrolly">The dashboard &#9662;</a></li>
+								<li><a href="#form_final" class="scrolly">The form &#9662;</a></li>
+								<li><a href="#responsive_final" class="scrolly">Responsive design &#9662;</a></li>
+								<li><a href="#validation_final" class="scrolly">The validation process &#9662;</a></li>
+								<li><a href="#landing_page_final" class="scrolly">Landing page &#9662;</a></li>
+							</ul>
+						</div>
+					</section>
+					<!-- my custom div for showing full screen mockups -->
+					<div class="full_screen">
+						<h2 id="components_final">Components</h2><hr>
+						<image src="images/portal/components_large.png" alt="" loading="lazy"></image>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<h2 id="dashboard_final">The dashboard</h2><hr>
+						<image src="images/portal/dashboard_header.png" alt="" loading="lazy"></image>
+						<image src="images/portal/dashboard_full.png" alt="" loading="lazy"></image>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<h2 id="form_final">The form</h2><hr>
+						<image src="images/portal/form_header.png" alt="" loading="lazy"></image>
+						<image src="images/portal/form_full.png" alt="" loading="lazy"></image>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<h2 id="responsive_final">Responsive design</h2><hr>
+						<image src="images/portal/breakpoints.png" alt="" loading="lazy"></image>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<image src="images/portal/dev_notes.png" alt="" loading="lazy"></image>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<h2 id="validation_final">Validating form data</h2><hr>
+						<image src="images/portal/validation_header.png" alt="" loading="lazy"></image>
+						<image src="images/portal/validation_full.png" alt="" loading="lazy"></image>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<h2 id="landing_page_final">The landing page</h2><hr>
+						<image src="images/portal/landing_page_header.png" alt="" loading="lazy"></image>
+						<image src="images/portal/landing_page_full.png" alt="" loading="lazy"></image>
+					</div>
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<p><strong><a href="#nav" class="scrolly">To Top &#9652;</a></strong></p>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; 2025 Nevoski Studios, LLC. All rights reserved.</li><li>Template by: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

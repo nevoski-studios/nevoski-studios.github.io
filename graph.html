@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Nevoski UX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- style overrides -->
+		 <link rel="stylesheet" href="assets/css/overrides.css">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title"   id="nav">Nevoski UX</a>
+				<nav>
+					<ul>
+						<li><a href="portal.html">Portal</a></li>
+						<li><a href="" style="border-bottom: 1px solid #ccff8b;font-size:12px;"><strong>Graph</strong></a></li>
+						<li><a href="various.html">Snapshots</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major" id="title">A data visualization application</h1>
+							<span class="image fit"><img src="images/graph/graph_header.png" alt="" /></span>
+							<p>Contents:&nbsp;&nbsp;<a href="#problem" class="scrolly">Problem &#9662;</a><span style="margin-right:1em;"></span><a href="#process" class="scrolly">Process &#9662;</a><span style="margin-right:1em;"></span><a href="#solution" class="scrolly">Solution &#9662;</a></p>
+							<h2 id="overview">Overview</h2>
+							<h3>The Project</h3>
+							<br>
+							<blockquote><span class="icon solid fa-exclamation" style="margin-right:1em;color:orange;"></span><i>This project is under an NDA. Certain details present in the original mockups and design process have been changed or removed.</i></blockquote>
+							<p>Very complex data sets can be difficult to navigate in an intuitive way, and so for this project an Amida team of engineers, mathematicians, developers, and designers sought to try and solve this problem by using graph theory principals and a node-and-edge visual representation of data. Applying proprietary heuristics metrics to the visualized data, the application would allow users to see errors represented visually, in a much more intuitive way than looking through the data itself, and thus assist engineers with their effort to fix the errors they otherwise may have missed.</p>
+							<h3>Role & skills</h3>
+							<p>As the principal designer (one of two), I was responsible for the majority of research and discovery, mockups, high fidelity interactive prototypes, and some marketing materials. The second designer was brought on after the MVP prototype was complete.</p>
+							<table class="alt">
+								<tbody>
+									<tr>
+										<td><span class="icon solid fa-info" style="margin-right:1em;"></span>Competitive analysis</td>
+										<td><span class="icon solid fa-info" style="margin-right:1em;"></span>SME interviews</td>
+										<td><span class="icon solid fa-desktop" style="margin-right:1em;"></span>Low-fidelity wireframes</td>
+										<td><span class="icon solid fa-users" style="margin-right:1em;"></span>Persona creation</td>
+									</tr>
+									<tr>
+										<td><span class="icon solid fa-desktop" style="margin-right:1em;"></span>Design system creation</td>
+										<td><span class="icon solid fa-desktop" style="margin-right:1em;"></span>High-fidelity mockups</td>
+										<td><span class="icon solid fa-cog" style="margin-right:1em;"></span></span>Interactive prototypes</td>
+										<td><span class="icon solid fa-image" style="margin-right:1em;"></span>Graphic design & illustration</td>
+									</tr>
+								</tbody>
+							</table>
+							<h3>Impact</h3>
+							<p>I delivered developer-ready mockups, interactive prototypes, product demos, marketing illustrations and animations. The interactive prototypes and marketing materials were part of the information pitched to several industry leading potential customers, which led to additional business development opportunities for Amida.</p>
+							<h2 id="problem">The problem</h2>
+							<h3>Background</h3>
+							<p>The team determined that a node-and-edge graph was the best way to represent our data sets. In this form of data visualization, nodes represent data points, and edges represent the relationship between data points. The team needed an application front-end that allowed users to explore the graph itself, view its information, and utilize a suite of additional tools and features.</p>
+							<image class="image fit" src="images/graph/node_and_edge.png"></image>
+							<h3>Design challenges</h3>
+							<p>Node-and-edge graphs are common ways of representing relationships between data, but the larger they grow, the less intuitive or readable they become. In our team's case, we needed to find a way to navigate and makes of sense of very large data sets, resulting in potentially extremely large numbers of nodes and edges in their graphical representation. The main design challenges associated with this project fell into two categories: </p>
+							<ol>
+								<li>How could users interact with the information dense and visually complex graph?</li>
+								<li>How could I incorporate the additional tools and features that needed to be able to dynamically affect an already complex visualization?</li>
+							</ol>
+							<p><strong><a href="#nav" class="scrolly">To Top &#9652;</a></strong></p>
+							<h2 id="process">The process</h2>
+							<h3>Persona creation</h3>
+							<p>In this case, the SMEs I needed to speak with were already on the team: my team was comprised of engineers who were representative of our end users, in terms of the expertise needed to make sense of the data this application was designed for. As a designer I was in a good position in terms of my ability to quickly learn about our users' needs and pain points.</p>
+							<image class="image fit" src="images/graph/security_persona.png"></image>
+							<h3>Competitive analysis</h3>
+							<p>Prior to beginning development on our custom application, the team was already using an existing third party data visualization tool for concepting purposes. Starting with this tool, I conducted a competitive analysis of other existing data visualization applications to get an idea of how they handled large data sets, and UI solutions for graph interaction and customization.</p>
+							<image class="image fit" src="images/graph/competitive_analysis.png"></image>
+							<p>Though they were helpful for an introduction to some common UI patterns, despite the large number of existing data visualization applications, none of them were able to provide the depth of visual interaction our use case required, and not all of them were complete front-end solutions, which further necessitated building our own custom tool.</p>
+							<p>Below is an example of a <a href="https://cosmograph.app/" target="_blank">Cosmograph</a> visualization with about <strong>26,000</strong> nodes. For our custom application, we needed to represent at least <strong>50,000</strong>, though they did not always need to be visible at once.</p>
+							<image class="image fit" src="images/graph/cosmograph_gif.gif"></image>
+							<h3>Defining the scope</h3>
+							<p>With a team full of SMEs, it quickly became apparent that they all had good ideas about what features to include based on their needs, and we began to see the potential for rapid scope creep almost immediately. To try and prevent this, I limited the team to determining the MVP features for each of the three main modes of interacting with the application. The main features of the site could be organized under a few different categories:</p>
+							<ol>
+								<li>A dashboard for setting up projects and viewing statistics</li>
+								<li>The UI features that augment the data visualization</li>
+								<li>The interactive graph data visualiztaion itself</li>
+							</ol>
+							<p>With these categories in mind, I began my ideation process with the specific features suggested by the team.</p>
+							<h3>The dashboard</h3>
+							<p>The dashboard is where users would import data sets before entering the interactive graph visualization itself. Its main features included:</p>
+							<ul>
+								<li>Giving users an overview of imported data sets</li>
+								<li>Creating distinct graph "views" for each data set</li>
+								<li>Choosing what heuristics to apply to each "view"</li>
+								<li>Tracking changes in the graph data over time</li>
+							</ul>
+							<image class="image fit" src="images/graph/lofi_dashboard.png"></image>
+							<p><a href="images/graph/lofi_dashboard_flow.png" target="_blank">View this full size &#9656;</a><br>or scroll through the <code>iframe</code> below.</p>
+							<iframe src="images/graph/lofi_dashboard_flow.png" style="height:414px;width:100%;"></iframe>
+							<p></p>
+							<p>An early low fidelity prototype of the dashboard, used for basic usability testing with the team:</p>
+							<image class="image fit" src="images/graph/lofi_dashboard_gif.gif" alt="GIF of the low fidelity dashboard prototype"></image>
+							<p></p>
+							<p>Mid fidelity mockup of the dashboard features:</p>
+							<image class="image fit" src="images/graph/dashboard_midfi.png"></image>
+							<p></p>
+							<h3>Graph UI</h3>
+							<p>On top of the nodes and edges of the data visualization, are the UI tools and features that help users make sense of, and keep track of the information associated with, the graph. The main features included:</p>
+							<ul>
+								<li>Saving graph objects to lists</li>
+								<li>View detailed object information</li>
+								<li>Apply a heatmap to the graph</li>
+								<li>Search the graph</li>
+								<li>Dynamic filters that affect graph behavior and appearance</li>
+								<li>Results from heuristics analyses</li>
+							</ul>
+							<image class="image fit" src="images/graph/lofi_graph_ui.png"></image>
+							<image class="image fit" src="images/graph/lofi_graph_ui_details.png"></image>
+							<p>Early low fidelity prototype of the graph UI:</p>
+							<image class="image fit" src="images/graph/midfi_graph_ui_gif.gif" alt="GIF of expanding graph elements"></image>
+							<p>Mid fidelity mockup of the graph UI:</p>
+							<image class="image fit" src="images/graph/midfi_panels.png"></image>
+							<image class="image fit" src="images/graph/graph_tooltips.png"></image>
+							<p></p>
+							<h3>Data visualization</h3>
+							<p>The data visualization itself includes all the nodes, edges, and other graphical elements the user can interact with in dynamic ways. One of the key distinctions between our application and other existing data visualization solutions, was the density of information we needed to represent. Bearing this in mind, the main features of graph interaction included:</p>
+							<ul>
+								<li>Progressive reveal of information density based on object interaction</li>
+								<li>Zoom, pan, and otherwise manually navigate around the graph</li>
+								<li>Mark and highlight graph nodes</li>
+								<li>Expand node "neighborboods"</li>
+							</ul>
+							<image class="image fit" src="images/graph/edge_challenge.png"></image>
+							<image class="image fit" src="images/graph/markers_pins.png"></image>
+							<p>An early prototype of zooming, panning, and expanding groups of graph elements:</p>
+							<image class="image fit" src="images/graph/zoom_pan_expand_gif.gif" alt="GIF of expanding graph elements"></image>
+							<p>A example of graph markers "clustering" when the user zooms and and out:</p>
+							<image class="image fit" src="images/graph/marker_grouping_gif.gif" alt="GIF of graph markers"></image>
+							<p>An early idea for pinning graph objects allowed users to retain a visual indication of the location of objects of interest. This was removed in later iterations:</p>
+							<image class="image fit" src="images/graph/pin_group_gif.gif" alt="GIF of graph pins"></image>
+							<h3>Testing and iteration</h3>
+							<p>Usability testing was limited to the internal development team itself, but this allowed for quick iteration on our initial ideas. SOme examples of early changes based on team testing and discussion were:</p>
+							<image class="image fit" src="images/graph/testing_iteration.png"></image>
+							<p><strong><a href="#nav" class="scrolly">To Top &#9652;</a></strong></p>
+							<h2 id="solution">The solution</h2>
+							<ul>
+								<li><a href="#components_final" class="scrolly">Components &#9662;</a></li>
+								<li><a href="#dashboard_ui" class="scrolly">The dashboard &#9662;</a></li>
+								<li><a href="#graph_ui" class="scrolly">Graph UI &#9662;</a></li>
+								<li><a href="#data_viz" class="scrolly">The data visualization &#9662;</a></li>
+							</ul>
+						</div>
+					</section>
+					<div class="full_screen">
+						<h2 id="components_final">Components</h2><hr>
+						<image src="images/graph/components_final.png" alt="" loading="lazy"></image>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<h2 id="dashboard_ui">Dashboard</h2><hr>
+						<image src="images/graph/dashboard_header.png" alt="" loading="lazy"></image>
+						<image src="images/graph/dashboard_full.png" alt="" loading="lazy"></image>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<h2 id="graph_ui">Graph UI</h2><hr>
+						<image src="images/graph/graph_ui_header.png" alt="" loading="lazy"></image>
+						<image src="images/graph/graph_ui_1.png" alt="" loading="lazy"></image>
+						<video autoplay muted loop controls>
+							<source src="video/menu_panel.mp4" type="video/mp4">
+							[Your browser does not support the <code>video</code> tag]
+						</video>
+						<image src="images/graph/graph_ui_2.png" alt="" loading="lazy"></image>
+						<video autoplay muted loop controls>
+							<source src="video/search_lists.mp4" type="video/mp4">
+							[Your browser does not support the <code>video</code> tag]
+						</video>
+						<a href="#solution" class="scrolly">&#9652; To solutions</a>
+						<h2 id="data_viz">Data visualization</h2><hr>
+						<h3>Zoom in and out</h3>
+						<video autoplay muted loop controls>
+							<source src="video/zoom.mp4" type="video/mp4">
+							[Your browser does not support the <code>video</code> tag]
+						</video>
+						<h3>Expanding a neighborhood</h3>
+						<video autoplay muted loop controls>
+							<source src="video/expand neighborhood.mp4" type="video/mp4">
+							[Your browser does not support the <code>video</code> tag]
+						</video>
+						<h3>Side panel UI</h3>
+						<video autoplay muted loop controls>
+							<source src="video/panels.mp4" type="video/mp4">
+							[Your browser does not support the <code>video</code> tag]
+						</video>
+						<h3>Highlighting objects</h3>
+						<video autoplay muted loop controls>
+							<source src="video/highlights.mp4" type="video/mp4">
+							[Your browser does not support the <code>video</code> tag]
+						</video>
+					</div>
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<p><strong><a href="#nav" class="scrolly">To Top &#9652;</a></strong></p>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; 2025 Nevoski Studios, LLC. All rights reserved.</li><li>Template by: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
