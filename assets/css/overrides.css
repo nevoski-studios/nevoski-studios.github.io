@@ -1,0 +1,63 @@
+a {
+    color: #acff8b;
+}
+blockquote {
+    font-size: 16px;
+}
+p, ol, ul, table{
+    font-size: 16px;
+}
+.wrapper > .inner {
+    max-width: 1080px;
+}
+table > tbody > tr > td > span{
+    color: #acff8b;
+}
+.full_screen { /* my custom div for final mockups */
+    background: white;
+    margin: 0 auto;
+    max-width: 1600px;
+    min-height: 300px;
+    padding: 1em 0;
+    width: 100%;
+}
+.full_screen > img{
+    display:block;
+    margin: 0 auto;
+    width: 100%;
+}
+.full_screen > h2{
+    color: #9B4CFF;
+    display: block;
+    margin: 2em 2em;
+}
+ .full_screen > h3{
+    color: #9B4CFF;
+    display: block;
+    margin: 1em 3em;
+ }
+.full_screen > hr{
+    border-top: 1px solid #9B4CFF;
+    margin: 0 0 3em 0;
+    width: 100%;
+}
+.full_screen > a{
+    color:#9B4CFF;
+    float: right;
+    margin: 4em 2em 0 0;
+}
+.full_screen > a:hover{
+    font-weight: bold;
+}
+.full_screen > p{
+    color: #404040;
+    margin: 1em 5em;
+}
+video{
+    width: 100%;
+}
+.full_screen > video{
+    border: 1px solid #ccc;
+    margin: 1em 5%;
+    width: 90%;
+}
